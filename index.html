@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Login - Karawan-e-Taleem Foundation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .welcome {
+      display: none;
+    }
+    .monogram {
+      max-width: 120px;
+      margin: auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="mono.png" alt="Karawan-e-Taleem Foundation Monogram" class="monogram">
+    <h1>Karawan-e-Taleem Foundation</h1>
+    <p>Empowering Education for a Better Future</p>
+  </div>
+
+  <div class="container" id="login-container">
+    <h2>Student Login</h2>
+    <form id="login-form">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="text" id="rollNumber" placeholder="Enter your roll number" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="container welcome" id="welcome-container">
+    <h2>Welcome, <span id="display-name"></span>!</h2>
+    <p>Your Roll Number: <span id="display-roll-number"></span></p>
+    <a href="ktf/index.html">
+      <button>Proceed to Quiz</button>
+    </a>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const loginContainer = document.getElementById("login-container");
+    const welcomeContainer = document.getElementById("welcome-container");
+    const displayName = document.getElementById("display-name");
+    const displayRollNumber = document.getElementById("display-roll-number");
+
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const rollNumber = document.getElementById("rollNumber").value.trim();
+
+      if (name && rollNumber) {
+        // Show welcome message and hide login form
+        loginContainer.style.display = "none";
+        welcomeContainer.style.display = "block";
+
+        // Set user details
+        displayName.textContent = name;
+        displayRollNumber.textContent = rollNumber;
+      } else {
+        alert("Please enter both your name and roll number.");
+      }
+    });
+  </script>
+</body>
+</html>
