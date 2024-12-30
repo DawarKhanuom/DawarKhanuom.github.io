@@ -329,9 +329,10 @@ function tryAgain(){
 }
 
 function goToHome(){
-    resultBox.classList.add("hide");
-    homeBox.classList.remove("hide");
-    resetQuiz();
+    // resultBox.classList.add("hide");
+    // homeBox.classList.remove("hide");
+    // resetQuiz();
+    window.location.href = "../index.html"
 }
 
 function startQuiz(){

@@ -66,11 +66,18 @@ const quiz = [
         topic: "math"
     },
     {
-        q: "Solve: 120 + 80 - 50",
+        q: "Solve: 130 + 80 - 50",
         options: ["140", "150", "160", "170"],
         answer: 2,
         topic: "math"
     },
+    {
+        q: "Which one of these four is largest?",
+        options: ["17.1", "17.5", "17.7", "17.11"],
+        answer: 2, // Correct index for "17.7"
+        topic: "math"
+    },
+    
     {
         q: "If you spend $45 out of $150, how much money is left?",
         options: ["$105", "$100", "$90", "$95"],
