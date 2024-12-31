@@ -14,7 +14,7 @@ const quiz = [
     {
         q: "If a book costs $25 and you get a 20% discount, how much do you pay?",
         options: ["$20", "$22", "$18", "$23"],
-        answer: 1,
+        answer: 0,
         topic: "math"
     },
     {

@@ -45,15 +45,19 @@ function loadQuestion() {
 
 // Handle Skip button
 function skipQuestion() {
+    // if (!skippedQuestions.includes(currentQuestionIndex)) {
+    //     skippedQuestions.push(currentQuestionIndex);
+    // }
+    // if(questionCounter === questionLimit){
+    //     quizOver();
+    // }else{
+    //     getNewQuestion()
+    // }
+    // moveToNextQuestion();
     if (!skippedQuestions.includes(currentQuestionIndex)) {
         skippedQuestions.push(currentQuestionIndex);
     }
-    if(questionCounter === questionLimit){
-        quizOver();
-    }else{
-        getNewQuestion()
-    }
-    // moveToNextQuestion();
+    next();
 }
 
 // Handle Save and Next button
@@ -74,7 +78,9 @@ function moveToNextQuestion() {
         quizOver();
     }
 }
+// =======================================dk 
 
+//dk=============================================
 // Select an answer and check correctness
 function selectAnswer(selectedIndex) {
     const correctAnswer = quiz[currentQuestionIndex].answer;
@@ -82,103 +88,7 @@ function selectAnswer(selectedIndex) {
         score++;
     }
     saveAndNext();
-}
-// Function to go to the next question
-// function goToNextQuestion() {
-//     if (currentQuestionIndex < totalQuestions - 1) {
-//         currentQuestionIndex++;
-//         loadQuestion(currentQuestionIndex);
-//     } else if (skippedQuestions.length > 0) {
-//         showSkippedQuestions();
-//     } else {
-//         showResults();
-//     }
-// }
-
-// // Function to display the results
-// function showResults() {
-//     const quizBox = document.querySelector(".quiz-box");
-//     const resultBox = document.querySelector(".result-box");
-
-//     quizBox.classList.add("hide");
-//     resultBox.classList.remove("hide");
-
-//     const totalAttempt = answers.filter((ans) => ans !== null).length;
-//     const totalCorrect = quiz.reduce((acc, question, index) => {
-//         return question.options[question.answer] === answers[index] ? acc + 1 : acc;
-//     }, 0);
-
-//     const totalWrong = totalAttempt - totalCorrect;
-//     const percentage = ((totalCorrect / totalQuestions) * 100).toFixed(2);
-
-//     document.querySelector(".result-box .total-question").innerText = totalQuestions;
-//     document.querySelector(".result-box .total-attempt").innerText = totalAttempt;
-//     document.querySelector(".result-box .total-correct").innerText = totalCorrect;
-//     document.querySelector(".result-box .total-wrong").innerText = totalWrong;
-//     document.querySelector(".result-box .percentage").innerText = `${percentage}%`;
-//     document.querySelector(".result-box .total-score").innerText = totalCorrect;
-// }
-
-// // Function to skip a question
-// function skipQuestion() {
-//     if (!skippedQuestions.includes(currentQuestionIndex)) {
-//         skippedQuestions.push(currentQuestionIndex);
-//     }
-//     goToNextQuestion();
-// }
-
-// // Function to save the answer and move to the next question
-// function saveAndNext() {
-//     const selectedOption = document.querySelector(".option.selected");
-//     if (selectedOption) {
-//         answers[currentQuestionIndex] = selectedOption.innerText;
-//     } else {
-//         answers[currentQuestionIndex] = null;
-//     }
-//     goToNextQuestion();
-// }
-
-// // Function to revisit a skipped question
-// function revisitQuestion(index) {
-//     skippedQuestions = skippedQuestions.filter((qIndex) => qIndex !== index);
-//     currentQuestionIndex = index;
-//     resumeQuiz();
-// }
-
-// // Function to resume the quiz
-// function resumeQuiz() {
-//     document.querySelector(".skipped-questions-box").classList.add("hide");
-//     document.querySelector(".quiz-box").classList.remove("hide");
-//     loadQuestion(currentQuestionIndex);
-// }
-
-// // Initialize the quiz
-// function startQuiz() {
-//     document.querySelector(".home-box").classList.add("hide");
-//     document.querySelector(".quiz-box").classList.remove("hide");
-//     loadQuestion(currentQuestionIndex);
-// }
-
-// // Retry the quiz
-// function tryAgain() {
-//     currentQuestionIndex = 0;
-//     skippedQuestions = [];
-//     answers = new Array(totalQuestions).fill(null);
-
-//     document.querySelector(".result-box").classList.add("hide");
-//     document.querySelector(".quiz-box").classList.remove("hide");
-//     loadQuestion(currentQuestionIndex);
-// }
-
-// // Go to home
-// function goToHome() {
-//     currentQuestionIndex = 0;
-//     skippedQuestions = [];
-//     answers = new Array(totalQuestions).fill(null);
-
-//     document.querySelector(".result-box").classList.add("hide");
-//     document.querySelector(".home-box").classList.remove("hide");
-// }
+} 
 let user = {
     name: "",
     rollNumber: "",
