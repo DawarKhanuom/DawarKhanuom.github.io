@@ -3138,7 +3138,9 @@ input, select, textarea {
 
 		/* Basic */
 
-			body {
+			body { 
+					color: black; /* Sets general text color to black */ 
+				
 				min-width: 320px;
 			}
 
