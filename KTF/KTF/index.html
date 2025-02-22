@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quizziee</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Home Box -->
+    <div class="home-box custom-box">
+        <h3>Instructions</h3>
+        <p>Total number of questions: <span class="total-question"></span></p>
+        <p>You can click the correct option only once.</p>
+        <p>Each question carries one point. No negative marking for wrong answers.</p>
+        <p>Questions are of Multiple Choice.</p>
+        <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz-box custom-box hide">
+        <div class="question-number"></div>
+        <div class="question-text"></div>
+        <div class="option-container"></div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="question-controls">
+            <button type="button" class="btn skip-btn" onclick="skipQuestion()">Skip</button>
+            <button type="button" class="btn save-next-btn" onclick="next()">Save & Next</button>
+        </div>
+        <div class="answers-indicator"></div>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box custom-box hide">
+        <h1>Result</h1>
+        <table>
+            <tr>
+                <td>Total Questions</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempted</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn go-home-btn" onclick="goToHome()">Go To Home</button>
+    </div>
+
+    <!-- Link Scripts -->
+    <script src="js/question.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

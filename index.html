@@ -1,111 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Login - Karawan-e-Taleem Foundation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      background: white;
-      max-width: 400px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    input {
-      width: calc(100% - 20px);
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .welcome {
-      display: none;
-    }
-    .monogram {
-      max-width: 120px;
-      margin: auto;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .header h1 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-  </style>
+    <title>Dawar Khan</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        #header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+        }
+        #header-container nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        #header-container nav ul li {
+            margin: 0 10px;
+        }
+        #banner {
+            width: 100%;
+            height: 300px;
+            background: url('./images/banner1.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-  <div class="header">
-    <img src="mono.png" alt="Karawan-e-Taleem Foundation Monogram" class="monogram">
-    <h1>Karawan-e-Taleem Foundation</h1>
-    <p>Empowering Education for a Better Future *</p>
-  </div>
+<body class="index is-preload">
+    <div id="page-wrapper">
 
-  <div class="container" id="login-container">
-    <h2>Student Login</h2>
-    <form id="login-form">
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <input type="text" id="rollNumber" placeholder="Enter your roll number" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+        <!-- Header -->
+        <header id="header-container">
+            <h1>Dawar Khan</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <div class="container welcome" id="welcome-container">
-    <h2>Welcome, <span id="display-name"></span>!</h2>
-    <p>Your Roll Number: <span id="display-roll-number"></span></p>
-    <a href="KTF/">
-      <button>Proceed to Quiz</button>
-    </a>
-  </div>
+        <!-- Banner -->
+        <!-- <section id="banner"> Computer Graphics, Visualization, XR, HCI and AI. >
+        </section> -->
 
-  <script>
-    const loginForm = document.getElementById("login-form");
-    const loginContainer = document.getElementById("login-container");
-    const welcomeContainer = document.getElementById("welcome-container");
-    const displayName = document.getElementById("display-name");
-    const displayRollNumber = document.getElementById("display-roll-number");
+        <!-- Profile Section -->
+        <section id="profile" class="wrapper style4 container special-alt">
+            <div class="row gtr-310">
+                <div class="col-4 col-12-narrower">
+                    <div class="image fit">
+                        <img src="./images/dk.png" alt="Dawar Khan" />
+                    </div>
+                </div>
+                <div class="col-8 col-12-narrower">
+                    <header>
+                        <h2>Dawar Khan</h2>
+                    </header> 
+    <p style="text-align: center; font-size: 16px; color: red; font-weight: bold;">This website is under construction. You can see my old website: <a href="https://sites.google.com/site/dawarkhancs/" target="_blank">here</a>.</p>
+     
 
-    loginForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const rollNumber = document.getElementById("rollNumber").value.trim();
+                    <p>I am working as a Postdoctoral researcher with <a href="https://cemse.kaust.edu.sa/viola">Professor Ivan Viola</a> in the Nanovisualization Research Group, KAUST, Saudi Arabia.</p>
+                    <p>My research interests include Computer Graphics, Visualization, Virtual Reality, 3D Deep Learning, and Human-AI interactions.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Preprints -->
+        <section class="wrapper style4 container special-alt">
+            <header class="special container">
+                <h3><strong>Publications</strong></h3>
+            </header>
 
-      if (name && rollNumber) {
-        // Show welcome message and hide login form
-        loginContainer.style.display = "none";
-        welcomeContainer.style.display = "block";
+            <!-- LoXR Paper -->
+            <div class="row gtr-50">
+                <div class="col-8 col-12-narrower">
+                    <header>
+                        <h2><a href="Loxr.html">LoXR: Performance Evaluation of Locally Executing LLMs on XR Devices</a></h2>
+                    </header>
+                    <p><em>arXiv preprint, <a href="https://arxiv.org/tba">TBA</a>, (2025)</em></p>
+                    <p><strong>Links:</strong> <a href="#">Project</a> | <a href="#">Source Code</a> | <a href="#">Video</a></p>
+                </div>
+                <div class="col-4 col-12-narrower imp-narrower">
+                    <div class="image fit">
+                        <img src="./images/LoXR4Nanovis.jpg" alt="LoXR" />
+                        <p class="label">arXiv 2025</p>
+                    </div>
+                </div>
+            </div>
 
-        // Set user details
-        displayName.textContent = name;
-        displayRollNumber.textContent = rollNumber;
-      } else {
-        alert("Please enter both your name and roll number.");
-      }
-    });
-  </script>
+            <!-- MidSurfer Paper -->
+            <div class="row gtr-50">
+                <div class="col-8 col-12-narrower">
+                    <header>
+                        <h2><a href="Midsurfer.html">MidSurfer: A Parameter-Free Approach for Mid-Surface Extraction</a></h2>
+                    </header>
+                    <p><em>arXiv preprint, <a href="https://arxiv.org/abs/2405.19339">2405.19339</a>, (2024)</em></p>
+                    <p><strong>Links:</strong> <a href="#">Project</a> | <a href="#">Source Code</a> | <a href="#">Video</a></p>
+                </div>
+                <div class="col-4 col-12-narrower imp-narrower">
+                    <div class="image fit">
+                        <img src="./images/midsurfer_teaser.png" alt="MidSurfer" />
+                        <p class="label">arXiv 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peer-reviewed Publications -->
+        <section class="wrapper style4 container special-alt">
+            <!-- <header class="special container">
+                <h2><strong>Peer-reviewed Publications</strong></h2>
+            </header> -->
+            
+            <!-- DiffFit Paper -->
+            <div class="row gtr-50">
+                <div class="col-8 col-12-narrower">
+                    <header>
+                        <h2><a href="DiffFit.html">DiffFit: Visually-Guided Differentiable Fitting of Molecule Structures</a></h2>
+                    </header>
+                    <p><em>IEEE TVCG 2024</em></p>
+                    <p><strong>Links:</strong> <a href="#">Project</a> | <a href="#">Source Code</a> | <a href="#">Video</a></p>
+                </div>
+                <div class="col-4 col-12-narrower imp-narrower">
+                    <div class="image fit">
+                        <img src="./images/DiffFit.jpg" alt="DiffFit" />
+                        <p class="label">TVCG</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DrKID Paper -->
+            <div class="row gtr-50">
+                <div class="col-8 col-12-narrower">
+                    <header>
+                        <h2><a href="DrKID.html">Dr. KID: Direct Remeshing and K-set Isometric Decomposition</a></h2>
+                    </header>
+                    <p><em>IEEE VIS 2023 (Honorable Mention)</em></p>
+                    <p><strong>Links:</strong> <a href="#">Project</a> | <a href="#">Source Code</a> | <a href="#">Video</a></p>
+                </div>
+                <div class="col-4 col-12-narrower imp-narrower">
+                    <div class="image fit">
+                        <img src="./images/DrKID.jpg" alt="Dr. KID" />
+                        <p class="label">IEEE VIS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer --> 
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://github.com/DawarKhanuom" class="icon brands circle fa-github "><span class="label">Github</span></a></li>
+                    <!-- <li><a href="https://twitter.com/dawarkhancs" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li> -->
+                    <li><a href="https://www.facebook.com/dawar.khan.712" class="icon brands circle fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.youtube.com/@dawarkhan-cs" class="icon brands circle fa-youtube"><span class="label">YouTube</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Dawar-Khan" class="icon brands circle fa-researchgate"><span class="label">ResearchGate</span></a></li>
+
+                    <!-- <li><a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" class="icon brands circle"><i class="fas fa-graduation-cap"></i><span class="label">Google Scholar</span></a></li> -->
+
+
+                    <li><a href="https://orcid.org/0000-0001-5864-1888" class="icon brands circle"><img src="./images/orcid-icon.jpg" alt="ORCID" style="width:40px; height:40px;"></a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" class="icon brands circle"><img src="./images/google-scholar-icon.jpg" alt="Google Scholar" style="width:40px; height:40px;"></a></li>
+                </ul> 
+            </footer> 
+    </div>  
+    </div>
 </body>
 </html>
