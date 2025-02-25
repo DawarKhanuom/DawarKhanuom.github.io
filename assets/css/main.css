@@ -33,6 +33,12 @@ body {
 	line-height: 1;
 }
 
+.icons a {
+    font-size: 29px !important;  /* Adjust size as needed */
+    line-height: 1.52;
+}
+
+
 
 .icons li a {
     display: flex;
