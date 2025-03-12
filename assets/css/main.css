@@ -29,9 +29,42 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+/* Default styles for all screens */
 body {
-	line-height: 1;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
+
+/* Styles for screens smaller than 600px (mobile devices) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Styles for screens larger than 1200px (desktops) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
 
 .icons a {
     font-size: 29px !important;  /* Adjust size as needed */
