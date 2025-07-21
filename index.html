@@ -128,7 +128,7 @@
         <section id="pub" class="wrapper style4 container special-alt"> 
             <h2 style= "text-align: center; color: black;"> <b>Publications (Selected) </b></h2><p style= "text-align: center; color: black;"> (# Joint first authors, * Corresponding author)</p>
 
-            <!-- LoXR Paper -->
+            <!-- LoXR Paper 1 -->
              
           <div style="display: flex; align-items: flex-start;">
     <!-- Image -->
@@ -140,13 +140,13 @@
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
         <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; background: yellow; padding: 3px 8px; border-radius: 5px;">
-            arXiv 2025; IEEE VR 2025 Poster
+           arXiv 2025 <!-- arXiv 2025; IEEE VR 2025 Poster -->
         </div>
 
         <!-- Title & Authors -->
         <div>
             <a href="https://arxiv.org/abs/2502.15761" target="_blank" style="font-weight:bold;color:rgb(11,83,148)">
-                LoXR: Performance Evaluation of Locally Executing LLMs on XR Devices</a><br />
+               AIvaluateXR: An Evaluation Framework for on-Device AI in XR with Benchmarking Results</a><br />
             <a href="https://cemse.kaust.edu.sa/profiles/dawar-khan"> <b>Dawar Khan</b></a>, 
             <a href="https://nanovis.kaust.edu.sa/profiles">Xinyu Liu</a>,    
             <a href="https://cemse.kaust.edu.sa/profiles/omar-mena-facio">Omar Mena</a>, 
@@ -163,20 +163,75 @@
   [<a href="https://ieeexplore.ieee.org/abstract/document/10973004" target="_blank" style="color:rgb(11,83,148)">Poster (IEEE VR 2025)</a>]
   [<a href="https://arxiv.org/abs/2502.15761" target="_blank" style="color:rgb(11,83,148)">Paper (arXiv)</a>]
 
-
-
-            <a href="data:text/plain;charset=utf-8,@article{LoXR2025,
-                author    = {Dawar Khan and Xinyu Liu and Omar Mena and Donggang Jia and Alexandre Kouyoumdjian and Ivan Viola},
-                title     = {LoXR: Performance Evaluation of Locally Executing LLMs on XR Devices},
-                journal   = {arXiv preprint},
-                year      = {2025},
-                volume    = {https://arxiv.org/abs/2502.15761},
-                url       = {https://arxiv.org/abs/2502.15761}
-}" download="LoXR2025.bib" style="color:rgb(11,83,148)">[Export BibTeX]</a>
+   <span onclick="document.getElementById('bibtex-aivaluatexr').style.display = (document.getElementById('bibtex-aivaluatexr').style.display === 'none') ? 'block' : 'none';" style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+  </p>
+  <pre id="bibtex-aivaluatexr" style="display: none; background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;">
+@article{khan2025aivaluatexr,
+  title        = {{AIvaluateXR}: An Evaluation Framework for on-Device {AI} in {XR} with Benchmarking Results},
+  author       = {Khan, Dawar and Liu, Xinyu and Mena, Omar and Jia, Donggang and Kouyoumdjian, Alexandre and Viola, Ivan},
+  year         = {2025},
+  eprint       = {2502.15761},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CG},
+  url          = {https://arxiv.org/abs/2502.15761}
+}
+  </pre>
 
         </div>
     </div>
 </div>
+<!-- LoXR -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+  <!-- Image -->
+  <div style="margin-right: 10px;">
+    <img src="./images/Poster2.png" alt="LoXR Poster" width="290" height="200">
+  </div>
+
+  <!-- Content -->
+  <div style="display: flex; flex-direction: column; width: 100%;">
+    <!-- Badge -->
+    <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; background: yellow; padding: 3px 8px; border-radius: 5px;">
+      IEEE VR 2025 Poster
+    </div>
+
+    <!-- Title and Authors -->
+    <p>
+      <a href="https://doi.org/10.1109/VRW66409.2025.00252" target="_blank" style="font-weight: bold; color: rgb(11,83,148);">
+        LLMs on XR (LoXR): Performance Evaluation of LLMs Executed Locally on Extended Reality Devices
+      </a><br />
+      Xinyu Liu, <a href="https://cemse.kaust.edu.sa/profiles/dawar-khan"><b>Dawar Khan</b></a>, Omar Mena, Donggang Jia, Alexandre Kouyoumdjian, Ivan Viola<br />
+
+      <!-- Venue -->
+      <em style="color: black;">IEEE Conference on Virtual Reality and 3D User Interfaces Workshops (VRW), 2025</em><br />
+
+      <!-- Links -->
+      [<a href="https://www.nanovis.org/Loxr.html" target="_blank" style="color: rgb(11,83,148);">Project</a>]
+      [<a href="https://github.com/nanovis/LoXR" target="_blank" style="color: rgb(11,83,148);">Source Code</a>]
+      [<a href="https://youtu.be/7TrXLekrEyI" target="_blank" style="color: rgb(11,83,148);">Video</a>]
+      [<a href="https://ieeexplore.ieee.org/abstract/document/10973004" target="_blank" style="color: rgb(11,83,148);"> Paper (IEEE VR Poster)</a>]
+      [<a href="https://www.nanovis.org/Loxr_Poster.html" target="_blank" style="color: rgb(11,83,148);">Poster & More</a>]
+
+      <!-- BibTeX Toggle -->
+      <span onclick="document.getElementById('bibtex-loxr').style.display = (document.getElementById('bibtex-loxr').style.display === 'none') ? 'block' : 'none';"
+            style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+    </p>
+
+    <!-- BibTeX -->
+    <pre id="bibtex-loxr" style="display: none; background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;">
+@inproceedings{liu2025loxr,
+  title     = {{LLMs on XR (LoXR)}: Performance Evaluation of {LLMs} Executed Locally on Extended Reality Devices},
+  author    = {Liu, Xinyu and Khan, Dawar and Mena, Omar and Jia, Donggang and Kouyoumdjian, Alexandre and Viola, Ivan},
+  booktitle = {2025 {IEEE} Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops ({VRW})},
+  pages     = {1212--1213},
+  year      = {2025},
+  doi       = {10.1109/VRW66409.2025.00252},
+  keywords  = {Performance evaluation, Three-dimensional displays, Extended reality, Large language models}
+}
+    </pre>
+  </div>
+</div>
+
+
 
                 
             
