@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dawar Khan - Photo Gallery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SAME CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        #header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+        }
+
+        #header-container nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        #header-container nav ul li {
+            margin: 0 10px;
+        }
+
+        /* ✅ MASONRY GALLERY */
+        .gallery {
+            column-count: 3;
+            column-gap: 12px;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 12px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        /* ⭐ FEATURED IMAGE */
+        .featured {
+            column-span: all;
+            margin-bottom: 20px;
+        }
+
+        .featured img {
+            width: 100%;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .gallery { column-count: 2; }
+        }
+
+        @media (max-width: 500px) {
+            .gallery { column-count: 1; }
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+        }
+
+        #lightbox img {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body class="container">
+<div id="page-wrapper">
+
+    <!-- HEADER -->
+    <header id="header-container">
+        <h2><b>Dawar Khan</b></h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#pub">Publications</a></li>
+                <li><a href="photos.html"><b>Photos Gallery</b></a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <section class="wrapper style4 container special-alt">
+
+        <header>
+            <h2 style="color:black;"><b>Photo Gallery</b></h2>
+        </header>
+
+        <!-- ⭐ FEATURED IMAGE -->
+        <div class="featured">
+            <img src="photos/JP1.png" onclick="openLightbox(this)">
+        </div>
+
+        <!-- GALLERY -->
+        <div class="gallery" id="gallery"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <p style="color: black; margin: 0;"><b>Connect with Me:</b></p>
+
+        <ul class="icons">
+            <li><a href="https://github.com/DawarKhanuom" class="icon brands fa-github" target="_blank"></a></li>
+            <li><a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" class="icon brands"><i class="fas fa-graduation-cap"></i></a></li>
+            <li><a href="https://www.researchgate.net/profile/Dawar-Khan-3" class="icon brands fa-researchgate" target="_blank"></a></li>
+            <li><a href="https://orcid.org/0000-0001-5864-1888" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" style="width:22px;">
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" class="icon brands fa-linkedin" target="_blank"></a></li>
+            <li><a href="https://www.youtube.com/@dawarkhan-cs" class="icon brands fa-youtube" target="_blank"></a></li>
+            <li><a href="https://www.facebook.com/dawar.khan.712" class="icon brands fa-facebook" target="_blank"></a></li>
+        </ul>
+
+    </footer>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img">
+</div>
+
+<!-- SCRIPT -->
+<script>
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+const images = [
+    "kaust1.jpg","kaust2.jpg", 
+     "bj1.jpg","bj2.jpg","bj3.png","bj4.jpg",
+    "n4.jpg", "cn2.jpg", "n7.jpg",
+    "n4.jpg",
+    "cvm1.jpg","cvm2.jpg","cvm3.jpg",
+    "ge1.jpg","ge2.jpg",
+    "jpa1.jpg",
+    "naist1.jpg",
+    "phd1.jpg","talk1.jpg",
+    "uk1.jpg","uk2.jpg","uk3.jpg",
+    "beh1.jpg",
+    "n3.jpg",
+    "n2.jpg",
+    "n1.jpg"
+];
+
+const gallery = document.getElementById("gallery");
+
+images.forEach(file => {
+    let wrapper = document.createElement("div");
+    wrapper.className = "gallery-item";
+
+    let img = document.createElement("img");
+    img.src = "photos/" + file;
+
+    img.onclick = () => openLightbox(img);
+
+    wrapper.appendChild(img);
+    gallery.appendChild(wrapper);
+});
+</script>
+
+</body>
+</html>
