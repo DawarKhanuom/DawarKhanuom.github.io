@@ -1,63 +1,74 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dawar Khan</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        #header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #222;
-            color: white;
+        body { font-family: Arial, sans-serif; color: #222; background: #fff; }
+
+        /* Break header out of the constrained container */
+        header {
+            background: #222 !important; color: white !important;
+            padding: 18px 20px !important;
+            display: flex !important; justify-content: space-between !important;
+            align-items: center !important; flex-wrap: wrap !important; gap: 12px !important;
+            border: none !important; box-shadow: none !important;
+            position: relative !important;
+            /* Pull header to full viewport width regardless of parent container */
+            left: 50% !important;
+            right: 50% !important;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            width: 100vw !important;
+            box-sizing: border-box !important;
+            /* Inner padding to match other pages */
+            padding-left: max(20px, calc((100vw - 1050px) / 2)) !important;
+            padding-right: max(20px, calc((100vw - 1050px) / 2)) !important;
         }
-        #header-container nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
+        header h2 {
+            margin: 0 !important; color: white !important;
+            font-size: 1rem !important; font-weight: bold !important;
+            text-transform: none !important; letter-spacing: normal !important;
+            border: none !important; padding: 0 !important;
         }
-        #header-container nav ul li {
-            margin: 0 10px;
+        header nav {
+            display: flex !important; flex-wrap: wrap !important; gap: 18px !important;
+            list-style: none !important; padding: 0 !important; margin: 0 !important;
+            border: none !important; background: none !important;
         }
-        /* #banner {
-            width: 100%;
-            height: 2px;
-            background: url('./images/banner1.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: right;
-            justify-content: right;
-            color: rgb(250, 245, 248);
-             background: yellow; 
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;} */
+        header nav a {
+            color: white !important; text-decoration: none !important;
+            font-size: 1rem !important; font-weight: normal !important;
+            padding: 0 !important; border: none !important; background: none !important;
+        }
+        header nav a:hover { text-decoration: underline !important; color: white !important; }
+
+        @media (max-width: 600px) {
+            header {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+        }
     </style>
 </head>
-<!-- <body class="index is-preload"> -->
-    <body class="container">
-    <div id="page-wrapper">
+<body class="container">
 
-        <!-- Header -->
-        <header id="header-container">
-            <h2> <b>Dawar Khan</b></h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="funding.html">Research Funding</a></li>
-                    <li><a href="index.html#pub">Publications</a></li>
-                    <li><a href="photos.html">Photos Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <h2>Dawar Khan</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="funding.html">Research Funding</a>
+            <a href="index.html#pub">Publications</a>
+            <a href="photos.html">Photos Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+<div id="page-wrapper">
 
         <!-- Banner -->
         <!-- <section id="banner" > Computer Graphics, Visualization, XR, HCI and AI 
@@ -147,7 +158,7 @@
        target="_blank">Prof. Dong-Ming Yan</a>.
 
     I received the
-    <span style="color: red;">&#x1f3c5;
+    <span style="color: #da1529;">&#x1f3c5;
     <strong>2018 Excellent International Graduate Award</strong></span>
     from UCAS.
 
@@ -176,11 +187,11 @@
 <p style="text-align: center; font-size: 15px;
           color: #333; font-weight: 500;">
     Open to
-    <span style="color: red; font-weight: bold;">
+    <span style="color: #0b5394; font-weight: bold;">
         faculty positions and research collaborations
     </span>.
     I hold a
-    <span style="color: red; font-weight: bold;">
+    <span style="color: #e4092dea; font-weight: bold;">
         UK Global Talent visa
     </span>
     and do not require employer sponsorship in the UK.
@@ -251,7 +262,7 @@
         <div style="align-self: flex-start;
                     font-size: 12px;
                     font-weight: bold;
-                    color:  rgb(255, 5, 5);
+                    color: #0b5394;
                     background: yellow;
                     padding: 3px 8px;
                     border-radius: 5px;">
@@ -329,7 +340,7 @@
             <span onclick="document.getElementById('bibtex-aivaluatexr').style.display = 
             (document.getElementById('bibtex-aivaluatexr').style.display === 'none') 
             ? 'block' : 'none';"
-            style="cursor: pointer; color: #007bff;">
+            style="cursor: pointer; color: #0b5394;">
             <strong>[BibTeX]</strong></span>
 
             <!-- BibTeX -->
@@ -367,7 +378,7 @@
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             TVCG (VIS2023)
         </div>
@@ -392,7 +403,7 @@
             [<a href="https://ieeexplore.ieee.org/document/10290929?fbclid=IwAR0cjTQtf57eHWUJjS16YQ6BqwbVv9x2xS3ExZ0b7OlOp-Ib0d9WbEKBj_0" target="_blank" style="color:rgb(11,83,148)">Paper</a>]
 <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-drkid').style.display = (document.getElementById('bibtex-drkid').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -430,7 +441,7 @@
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             TVCG 2022
         </div>
@@ -452,7 +463,7 @@
                 <em>IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 28, no. 3, pp. 1680-1713, 1 March 2022</em>
             </a> <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-slr').style.display = (document.getElementById('bibtex-slr').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 <!-- BibTeX -->
 <pre id="bibtex-slr" style="display: none; background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;">
 @article{khan:2022:tvcgSLR,
@@ -488,7 +499,7 @@
   <!-- Content -->
   <div style="display: flex; flex-direction: column; width: 100%;">
     <!-- Badge -->
-    <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; background: yellow; padding: 3px 8px; border-radius: 5px;">
+    <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; background: yellow; padding: 3px 8px; border-radius: 5px;">
       IEEE VR 2025 Poster
     </div>
 
@@ -514,7 +525,7 @@
 
       <!-- BibTeX Toggle -->
       <span onclick="document.getElementById('bibtex-loxr').style.display = (document.getElementById('bibtex-loxr').style.display === 'none') ? 'block' : 'none';"
-            style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+            style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
     </p>
 
     <!-- BibTeX -->
@@ -545,7 +556,7 @@
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             TVCG (VIS2024)
         </div>
@@ -572,7 +583,7 @@
 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-difffit').style.display = (document.getElementById('bibtex-difffit').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -611,7 +622,7 @@
   <div style="display: flex; flex-direction: column; width: 100%;">
 
     <!-- Badge -->
-    <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; background: yellow; padding: 3px 8px; border-radius: 5px;">
+    <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; background: yellow; padding: 3px 8px; border-radius: 5px;">
       arXiv 2026
     </div>
 
@@ -640,7 +651,7 @@
       <!-- BibTeX -->
       <span onclick="document.getElementById('bibtex-clickaixr').style.display = 
         (document.getElementById('bibtex-clickaixr').style.display === 'none') ? 'block' : 'none';"
-        style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+        style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
     </p>
 
     <pre id="bibtex-clickaixr" style="display: none; background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;">
@@ -670,7 +681,7 @@
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: rgb(255, 5, 5); 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background:  yellow; padding: 3px 8px; border-radius: 5px;">
             IEEE CG&A 2025
         </div>
@@ -699,7 +710,7 @@
 
             <!-- BibTeX Toggle -->
             <span onclick="document.getElementById('bibtex-midsurfer').style.display = (document.getElementById('bibtex-midsurfer').style.display === 'none') ? 'block' : 'none';"
-                  style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+                  style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
         </div>
 
         <!-- BibTeX -->
@@ -745,7 +756,7 @@
         <div style="align-self: flex-start;
                     font-size: 12px;
                     font-weight: bold;
-                    color: rgb(255,5,5);
+                    color: #0b5394;
                     background: yellow;
                     padding: 3px 8px;
                     border-radius: 5px;">
@@ -826,7 +837,7 @@ author = {Tanveer Younis and Dawar Khan and Zhanglin Cheng}
 
     <!-- Conference Tag -->
     <div style="align-self: flex-start; font-size: 12px; font-weight: bold;
-                color: rgb(255,5,5); background: yellow;
+                color: #0b5394; background: yellow;
                 padding: 3px 8px; border-radius: 5px;">
         3DV 2026
     </div>
@@ -904,7 +915,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; background: yellow; padding: 3px 8px; border-radius: 5px;">
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; background: yellow; padding: 3px 8px; border-radius: 5px;">
             arXiv 2025
         </div>
 
@@ -924,7 +935,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a>
 <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-ghar').style.display = (document.getElementById('bibtex-ghar').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 
 
 <!-- BibTeX -->
@@ -958,7 +969,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             arXiv 2024
         </div>
@@ -978,7 +989,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-biomedseg').style.display = (document.getElementById('bibtex-biomedseg').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1010,7 +1021,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             CGI 2023
         </div>
@@ -1029,7 +1040,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             <!-- BibTeX Toggle -->
  <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-Khan2023CGImeshsmoothing').style.display = (document.getElementById('bibtex-Khan2023CGImeshsmoothing').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 
 <!-- BibTeX -->
 <pre id="bibtex-Khan2023CGImeshsmoothing" style="display: none; background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;">
@@ -1062,7 +1073,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             Computers & Graphics 2022
         </div>
@@ -1083,7 +1094,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-vinav').style.display = (document.getElementById('bibtex-vinav').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1116,7 +1127,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             La Radiologia Medica 2023
         </div>
@@ -1139,7 +1150,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-hassan2024').style.display = (document.getElementById('bibtex-hassan2024').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1175,7 +1186,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             Applied Intelligence 2022
         </div>
@@ -1197,7 +1208,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-jabeen2022').style.display = (document.getElementById('bibtex-jabeen2022').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1229,7 +1240,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             Visual Comp.  2020
         </div>
@@ -1250,7 +1261,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-khan2020').style.display = (document.getElementById('bibtex-khan2020').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1287,7 +1298,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             CVMJ 2018
         </div>
@@ -1307,7 +1318,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-khan2018').style.display = (document.getElementById('bibtex-khan2018').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1342,7 +1353,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             IEEE Access 2018
         </div>
@@ -1365,7 +1376,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-artoolkit2018').style.display = (document.getElementById('bibtex-artoolkit2018').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1400,7 +1411,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             IJMS 2018
         </div>
@@ -1420,7 +1431,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
              <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-msr2018').style.display = (document.getElementById('bibtex-msr2018').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1454,7 +1465,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             CAMWA 2017
         </div>
@@ -1475,7 +1486,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a>  
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-cma2017').style.display = (document.getElementById('bibtex-cma2017').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1512,7 +1523,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             Remote Sensing 2019
         </div>
@@ -1530,7 +1541,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-rs2019').style.display = (document.getElementById('bibtex-rs2019').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1567,7 +1578,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             VCIBA 2018
         </div>
@@ -1587,7 +1598,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-vciba2018').style.display = (document.getElementById('bibtex-vciba2018').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1622,7 +1633,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             EIT 2022
         </div>
@@ -1640,7 +1651,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-ali2022').style.display = (document.getElementById('bibtex-ali2022').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1675,7 +1686,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             CAVW 2022
         </div>
@@ -1694,7 +1705,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-cui2022').style.display = (document.getElementById('bibtex-cui2022').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1731,7 +1742,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             CSI 2015
         </div>
@@ -1749,7 +1760,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-khan2015').style.display = (document.getElementById('bibtex-khan2015').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1781,7 +1792,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             SIGGRAPH ASIA 2016 Poster
         </div>
@@ -1801,7 +1812,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a>
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-khan2016obtuse').style.display = (document.getElementById('bibtex-khan2016obtuse').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->
@@ -1835,7 +1846,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
     <!-- Right Side Content -->
     <div style="display: flex; flex-direction: column; width: 100%;">
         <!-- Journal Name on Top Left -->
-        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: red; 
+        <div style="align-self: flex-start; font-size: 12px; font-weight: bold; color: #0b5394; 
                     background: yellow; padding: 3px 8px; border-radius: 5px;">
             SIGGRAPH 2018, Poster
         </div>
@@ -1854,7 +1865,7 @@ url       = {https://doi.org/10.1109/3DV69130.2026.00179}
             </a> 
             <!-- BibTeX Toggle -->
 <span onclick="document.getElementById('bibtex-men2018cvt').style.display = (document.getElementById('bibtex-men2018cvt').style.display === 'none') ? 'block' : 'none';"
-      style="cursor: pointer; color: #007bff;"><strong>[BibTeX]</strong></span>
+      style="cursor: pointer; color: #0b5394;"><strong>[BibTeX]</strong></span>
 </p>
 
 <!-- BibTeX -->

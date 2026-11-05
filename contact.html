@@ -1,132 +1,95 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Dawar Khan</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Dawar Khan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        #header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #222;
-            color: white;
+        body { font-family: Arial, sans-serif; color: #222; margin: 0; background: #fff; }
+
+        header {
+            background: #222; color: white;
+            padding: 18px max(20px, calc((100% - 1050px) / 2));
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 12px;
         }
-        #header-container nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-        #header-container nav ul li {
-            margin: 0 10px;
-        }
-        #banner {
-            width: 100%;
-            height: 2px;
-            background: url('./images/banner1.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: right;
-            justify-content: right;
-            color: rgb(250, 245, 248);
-            /* background: yellow; */
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
+        header h2 { margin: 0; }
+        nav { display: flex; flex-wrap: wrap; gap: 18px; }
+        nav a { color: white; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+
+        main { max-width: 950px; margin: 40px auto; padding: 0 24px; }
+        h1 { font-size: 30px; }
+        p { line-height: 1.7; margin: 7px 0; }
+        a { color: #0b5394; }
+
+        .profile-wrap { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; margin-top: 24px; }
+        .profile-wrap img { width: 220px; border-radius: 6px; display: block; }
+
+        .contact-info h2 { font-size: 21px; color: #0b5394; margin: 0 0 16px; }
+        .contact-info p { font-size: 16px; margin: 8px 0; }
+
+        .social-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 24px; }
+        .social-links a { color: #0b5394; font-size: 22px; text-decoration: none; }
+        .social-links a:hover { color: #083f7a; }
+        .social-links img { width: 22px; height: 22px; vertical-align: middle; }
+
+        footer { margin: 50px auto 20px; max-width: 950px; padding: 0 24px; color: #666; font-size: 13px; }
+
+        @media (max-width: 600px) {
+            header { padding: 18px 20px; }
+            main { margin: 24px auto; }
+            .profile-wrap { flex-direction: column; }
+            .profile-wrap img { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
+<body>
 
-<body class="container">
-    <div id="page-wrapper">
+    <header>
+        <h2>Dawar Khan</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="funding.html">Research Funding</a>
+            <a href="index.html#pub">Publications</a>
+            <a href="photos.html">Photos Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <!-- Header -->
-        <header id="header-container">
-            <h2> <b>Dawar Khan</b></h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="funding.html">Research Funding</a></li>
-                    <li><a href="index.html#pub">Publications</a></li>
-                    <li><a href="photos.html">Photos Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <main>
 
-        <!-- Banner -->
-        <!-- <section id="banner"> Computer Graphics, Visualization, XR, HCI and AI
-        </section> -->
+        <h1>Contact</h1>
 
-        <!-- Profile Section -->
-        <section id="profile" class="wrapper style4 container special-alt">
-            <div class="row gtr-310">
-                <div class="col-4 col-12-narrower">
-                    <div class="image fit">
-                        <img src="./images/dk.png" alt="Dawar Khan" />
-                    </div>
+        <div class="profile-wrap">
+            <img src="./images/dk.png" alt="Dawar Khan">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>dawar.khan AT kaust.edu.sa</p>
+                <p>dawar.khan AT uea.ac.uk</p>
+
+                <p style="margin-top: 20px;"><strong>Connect with Me:</strong></p>
+                <div class="social-links">
+                    <a href="https://github.com/DawarKhanuom" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.researchgate.net/profile/Dawar-Khan-3" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://orcid.org/0000-0001-5864-1888" target="_blank" title="ORCID">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@dawarkhan-cs" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/dawar.khan.712" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
                 </div>
-                <div class="col-8 col-12-narrower">
-                    <header>
-                        <h2  style=  "color: black;"><b>Contact</b></h2>
-                    </header> 
-
-                    <p style= "color: black; ">  dawar.khan AT kaust.edu.sa</p>
-
-                    <p style= "color: black; ">  dawar.khan AT uea.ac.uk</p>
-                    
-                    <p >  . </p>
-                    
-                    <p > .  </p>
-                    
-                    <p > .  </p>
-                    
-                    <p >  . </p>
-                    
-                    <p >   </p>
-                    
-                    <p >   </p>
-                    
+            </div>
         </div>
-    </div>
-</div>
 
+    </main>
 
+    <footer>
+        Dr. Dawar Khan · University of East Anglia, UK
+    </footer>
 
-        </section>
- 
-        <!-- Footer --> 
-        <footer id="footer">
-        <!-- FlagCounter Visitor Counter -->
-<!-- <a href="https://s01.flagcounter.com/more/FLHY/"> -->
-    <!-- <a href="https://info.flagcounter.com/OpdF"><img src="https://s01.flagcounter.com/count2/OpdF/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a> -->
-    <!-- <img src="https://s01.flagcounter.com/count/FLHY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_20/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0"> -->
-  <!-- </a> -->
-   
-  
-        
-        
-    <p style="color: black; margin: 0;"> <b>Connect with Me:</b> </p>
-                <ul class="icons">
-                     
-        <li><a href="https://github.com/DawarKhanuom" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" class="icon brands"><i class="fas fa-graduation-cap"></i><span class="label">Google Scholar</span></a></li> 
-        <li><a href="https://www.researchgate.net/profile/Dawar-Khan-3" class="icon brands fa-researchgate" target="_blank"><span class="label">ResearchGate</span></a></li> 
-        <li><a href="https://orcid.org/0000-0001-5864-1888" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" style="width: 22px; height: 22px; vertical-align: middle;">
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-        <li><a href="https://www.youtube.com/@dawarkhan-cs" class="icon brands fa-youtube" target="_blank"><span class="label">YouTube</span></a></li> 
-        <li><a href="https://www.facebook.com/dawar.khan.712" class="icon brands fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-                </ul> 
-            </footer> 
-    </div>  
-    </div>
 </body>
 </html>

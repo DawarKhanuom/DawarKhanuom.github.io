@@ -1,199 +1,138 @@
-﻿<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Dawar Khan - Photo Gallery</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- SAME CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photos Gallery | Dawar Khan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        #header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #222;
-            color: white;
-        }
+        body { font-family: Arial, sans-serif; color: #222; margin: 0; background: #fff; }
 
-        #header-container nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
+        header {
+            background: #222; color: white;
+            padding: 18px max(20px, calc((100% - 1050px) / 2));
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 12px;
         }
+        header h2 { margin: 0; }
+        nav { display: flex; flex-wrap: wrap; gap: 18px; }
+        nav a { color: white; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
 
-        #header-container nav ul li {
-            margin: 0 10px;
-        }
+        main { max-width: 1050px; margin: 40px auto; padding: 0 24px; }
+        h1 { font-size: 30px; }
 
-        /* ✅ MASONRY GALLERY */
-        .gallery {
-            column-count: 3;
-            column-gap: 12px;
-        }
+        /* Masonry gallery */
+        .gallery { column-count: 3; column-gap: 12px; margin-top: 24px; }
+        .gallery-item { break-inside: avoid; margin-bottom: 12px; }
+        .gallery img { width: 100%; height: auto; border-radius: 10px; cursor: pointer; transition: transform 0.25s; display: block; }
+        .gallery img:hover { transform: scale(1.02); }
 
-        .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 12px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.02);
-        }
-
-        /* ⭐ FEATURED IMAGE */
-        .featured {
-            column-span: all;
-            margin-bottom: 20px;
-        }
-
-        .featured img {
-            width: 100%;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .gallery { column-count: 2; }
-        }
-
-        @media (max-width: 500px) {
-            .gallery { column-count: 1; }
-        }
+        /* Featured image */
+        .featured { margin-bottom: 20px; }
+        .featured img { width: 100%; border-radius: 12px; cursor: pointer; display: block; }
 
         /* Lightbox */
-        #lightbox {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-        }
+        #lightbox { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor: pointer; }
+        #lightbox img { display: block; margin: 40px auto 0; max-width: 90%; max-height: 85vh; border-radius: 6px; }
 
-        #lightbox img {
-            display: block;
-            margin: auto;
-            max-width: 90%;
-            max-height: 90%;
-            margin-top: 40px;
-        }
+        .social-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 32px; }
+        .social-links strong { margin-right: 4px; }
+        .social-links a { color: #0b5394; font-size: 22px; text-decoration: none; }
+        .social-links a:hover { color: #083f7a; }
+        .social-links img { width: 22px; height: 22px; vertical-align: middle; }
+
+        footer { margin: 50px auto 20px; max-width: 1050px; padding: 0 24px; color: #666; font-size: 13px; }
+
+        @media (max-width: 900px) { .gallery { column-count: 2; } }
+        @media (max-width: 500px) { .gallery { column-count: 1; } }
+        @media (max-width: 600px) { header { padding: 18px 20px; } main { margin: 24px auto; } }
     </style>
 </head>
+<body>
 
-<body class="container">
-<div id="page-wrapper">
-
-    <!-- HEADER -->
-    <header id="header-container">
-        <h2><b>Dawar Khan</b></h2>
+    <header>
+        <h2>Dawar Khan</h2>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="funding.html">Research Funding</a></li>
-                <li><a href="index.html#pub">Publications</a></li>
-                <li><a href="photos.html">Photos Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="funding.html">Research Funding</a>
+            <a href="index.html#pub">Publications</a>
+            <a href="photos.html">Photos Gallery</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- MAIN SECTION -->
-    <section class="wrapper style4 container special-alt">
+    <main>
 
-        <header>
-            <h2 style="color:black;"><b>Photo Gallery</b></h2>
-        </header>
+        <h1>Photo Gallery</h1>
 
-        <!-- ⭐ FEATURED IMAGE -->
+        <!-- Featured image -->
         <div class="featured">
-            <img src="photos/JP1.png" onclick="openLightbox(this)">
+            <img src="photos/JP1.png" onclick="openLightbox(this)" alt="Featured photo">
         </div>
 
-        <!-- GALLERY -->
+        <!-- Masonry gallery -->
         <div class="gallery" id="gallery"></div>
 
-    </section>
+        <div class="social-links">
+            <strong>Connect with Me:</strong>
+            <a href="https://github.com/DawarKhanuom" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.researchgate.net/profile/Dawar-Khan-3" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0001-5864-1888" target="_blank" title="ORCID">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID">
+            </a>
+            <a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@dawarkhan-cs" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/dawar.khan.712" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
 
-    <!-- FOOTER -->
-    <footer id="footer">
+    </main>
 
-        <p style="color: black; margin: 0;"><b>Connect with Me:</b></p>
-
-        <ul class="icons">
-            <li><a href="https://github.com/DawarKhanuom" class="icon brands fa-github" target="_blank"></a></li>
-            <li><a href="https://scholar.google.com/citations?hl=en&user=znqOEu4AAAAJ" class="icon brands"><i class="fas fa-graduation-cap"></i></a></li>
-            <li><a href="https://www.researchgate.net/profile/Dawar-Khan-3" class="icon brands fa-researchgate" target="_blank"></a></li>
-            <li><a href="https://orcid.org/0000-0001-5864-1888" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" style="width:22px;">
-            </a></li>
-            <li><a href="https://www.linkedin.com/in/dawar-khan-a1885b77/" class="icon brands fa-linkedin" target="_blank"></a></li>
-            <li><a href="https://www.youtube.com/@dawarkhan-cs" class="icon brands fa-youtube" target="_blank"></a></li>
-            <li><a href="https://www.facebook.com/dawar.khan.712" class="icon brands fa-facebook" target="_blank"></a></li>
-        </ul>
-
+    <footer>
+        Dr. Dawar Khan · University of East Anglia, UK
     </footer>
 
-</div>
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" alt="Enlarged photo">
+    </div>
 
-<!-- Lightbox -->
-<div id="lightbox" onclick="this.style.display='none'">
-    <img id="lightbox-img">
-</div>
+    <script>
+    function openLightbox(img) {
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = img.src;
+    }
 
-<!-- SCRIPT -->
-<script>
-function openLightbox(img) {
-    document.getElementById("lightbox").style.display = "block";
-    document.getElementById("lightbox-img").src = img.src;
-}
+    const images = [
+        "kaust1.jpg","kaust2.jpg",
+        "n2.jpg","n3.jpg",
+        "bj1.jpg","bj2.jpg","bj3.png","bj4.jpg",
+        "n4.jpg","cn2.jpg","n7.jpg",
+        "cvm1.jpg","cvm2.jpg","cvm3.jpg",
+        "ge1.jpg","ge2.jpg",
+        "jpa1.jpg",
+        "naist1.jpg",
+        "talk1.jpg",
+        "uk1.jpg","uk2.jpg","uk3.jpg",
+        "beh1.jpg",
+        "phd1.jpg",
+        "n1.jpg"
+    ];
 
-const images = [
-    "kaust1.jpg","kaust2.jpg", 
-    "n2.jpg",  "n3.jpg",
-     "bj1.jpg","bj2.jpg","bj3.png","bj4.jpg", 
-    "n4.jpg", "cn2.jpg", "n7.jpg", 
-    "cvm1.jpg","cvm2.jpg","cvm3.jpg",
-    "ge1.jpg","ge2.jpg",
-    "jpa1.jpg",
-    "naist1.jpg",
-    "talk1.jpg",
-    "uk1.jpg","uk2.jpg","uk3.jpg",
-    "beh1.jpg",
-    "phd1.jpg",
-    "n1.jpg"
-];
-
-const gallery = document.getElementById("gallery");
-
-images.forEach(file => {
-    let wrapper = document.createElement("div");
-    wrapper.className = "gallery-item";
-
-    let img = document.createElement("img");
-    img.src = "photos/" + file;
-
-    img.onclick = () => openLightbox(img);
-
-    wrapper.appendChild(img);
-    gallery.appendChild(wrapper);
-});
-</script>
+    const gallery = document.getElementById("gallery");
+    images.forEach(file => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "gallery-item";
+        const img = document.createElement("img");
+        img.src = "photos/" + file;
+        img.alt = file.replace(/\.[^.]+$/, "");
+        img.onclick = () => openLightbox(img);
+        wrapper.appendChild(img);
+        gallery.appendChild(wrapper);
+    });
+    </script>
 
 </body>
 </html>
